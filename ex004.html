@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Creative Studio</title>
     <style>
         @charset "UTF-8";
 
@@ -92,12 +92,15 @@
         nav {
             display: flex;
             justify-content: space-between;
-            margin: 60px 100px;
+            margin: 00px 100px;
+            padding-top: 60px;
+            padding-bottom: 60px;
         }
 
         /* #left {
             margin-left: 200px;
         } */
+
 
         section#left > h4 {
             font-size: large;
@@ -120,22 +123,31 @@
             width: 350px;
         }
 
+        iframe {
+            width: 350px;
+            height: 200px;
+            
+            opacity: 50%;
+        }
+
         section#right {
             margin-top: 150px;
-            /* position: absolute;
-            top: 37%;
-            left: 77%; */
         }
 
         section#right > h4 {
             margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.900);
+        }
+
+        section#right img {
+            border-radius: 3px;
         }
 
         hr#top_footer {
             max-width: 1400px;
             min-width: 300px;
             width: 81vw;
-            margin: 150px auto 20px;
+            margin: 120px auto 40px;
             height: 3px;
             border: none;
             background-color: rgba(255, 255, 255, 0.150);
@@ -144,31 +156,33 @@
         footer {
             max-width: 1400px;
             display: flex;
-            margin: auto;
+            padding: 0px 200px;
+            margin: 0 auto;
             width: 86.5vw;
             justify-content: center;
         }
 
         footer > div {
-            display: block;
             width: 400px;
-            margin: 0 60px;
+            margin: 0 30px 0px 0px;
         }
 
         footer > div > p {
-            position: relative;
+            /* position: relative; */
             margin-top: 30px;
+            margin-right: 30px;
             font-size: 11px;
             
         }
 
         footer > div > p#footer_last_p {
-            width: 300px;
+            width: 250px;
             margin-top: 5px;
         }
 
         footer > hr {
             height: 80px;
+            margin: 0px 80px 0px 0px;
             min-width: 3px;
             max-width: 3px;
             border: none;
@@ -180,6 +194,15 @@
             font-size: 18px;
             color: rgba(255, 255, 255, 0.900);
         }
+
+        footer > div#footer_first_title {
+            width: 200px;
+        }
+
+        footer > div#footer_last_title {
+            margin-right: 0px;
+            width: 200px;
+        }
         
 
     </style>
@@ -190,7 +213,7 @@
     <header>
         <nav>
             <a href="#" id="logo">coventic</a>
-            <a href="#" class="btn" id="singup">Sing Up</a>
+            <a href="#" class="btn" id="signup">Sign Up</a>
         </nav>
     </header>
 
@@ -207,17 +230,30 @@
 
             <section id="right">
                 <h4>Meet our Team</h4>
-                <iframe src="" frameborder="1"></iframe>
+                <img src="equipe.png" alt="equipe">
             </section>
+            <hr id="top_footer">
         </article>
-
+        <section>
+            <div  id="side_bar">
+                <hr>
+                <hr>
+                <hr>
+                <a href="#" target="tela" rel="noopener"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#" target="tela" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#" target="tela" rel="noopener"><img src="twitter.png" alt="Twitter"></a>
+                <hr>
+                <h2>Explore</h2>
+                <a href="#" target="tela" rel="noopener"><img src="share.png" alt="Instagram"></a>
+                <a href="#" target="tela" rel="noopener"><img src="question.png" alt="Twitter"></a>
+            </div>
+        </section>
     </main>
 
-    <hr id="top_footer">
+    
 
     <footer>
-
-        <div class="footer_title">
+        <div class="footer_title" id="footer_first_title">
             <h2>Data <br> Analysis</h2>
         </div>
 
@@ -225,15 +261,15 @@
 
         <div>
             <h2>324</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div>
             <h2>1021</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div>
             <h2>511</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div>
             <p id="footer_last_p">
@@ -243,7 +279,7 @@
 
         <hr>
 
-        <div  class="footer_title">
+        <div  class="footer_title" id="footer_last_title">
             <h2>Wanna join <br> our Team?</h2>
         </div>
     </footer>
