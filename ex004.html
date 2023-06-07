@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @charset "UTF-8";
+
         * {
             margin: 0px;
             padding: 0px;
@@ -26,31 +28,49 @@
             font-family: Euclid;
         }
 
+        h1, h2, h3, h4, p, a, iframe {
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
+        }
+
         .gradiente_back {
             width: 100vw;
             height: 100vh;
             margin: 0 auto;
             /* background-image: radial-gradient(farthest-side at 50% 0px,  #00ebf3, #022030); */
             background-image: radial-gradient(ellipse at top, #02f7ff, transparent);
+            
         }
 
         #bubles { 
-            position: absolute;
-            top: 50%;
+            position: fixed;
+            top: 400px;
             left: 50%;
             transform: translate(-50%, -50%);
-            height: 100%;
-            width: 50%;
+            height: 800px;
+            width: 800px;
+            /* max-width: 1000px;
+            max-height: 1000px; */
             background-image: url(waterink_buble.png);
-            background-position: center bottom;
+            background-position: center top;
             background-repeat: no-repeat;
             background-size: cover;
-            opacity: 80%;
+            opacity: 75%;
+            z-index: -1;
         }
 
         main {
+            padding: 0px 200px;
+            min-width: 300px;
+            max-width: 1400px;
+            /* background-color: red; */
+            margin: 0 auto;
             
-            
+        }
+
+        article.content_flex {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         a:-webkit-any-link {
@@ -65,7 +85,7 @@
 
         #logo {
             font-size: larger;
-            color: rgba(255, 255, 255, 0.800);
+            color: rgb(255, 255, 255);
             margin-left: 20px;
         }
 
@@ -75,9 +95,9 @@
             margin: 60px 100px;
         }
 
-        #left {
+        /* #left {
             margin-left: 200px;
-        }
+        } */
 
         section#left > h4 {
             font-size: large;
@@ -101,9 +121,10 @@
         }
 
         section#right {
-            position: absolute;
+            margin-top: 150px;
+            /* position: absolute;
             top: 37%;
-            left: 77%;
+            left: 77%; */
         }
 
         section#right > h4 {
@@ -111,6 +132,8 @@
         }
 
         hr#top_footer {
+            max-width: 1400px;
+            min-width: 300px;
             width: 81vw;
             margin: 150px auto 20px;
             height: 3px;
@@ -119,6 +142,7 @@
         }
 
         footer {
+            max-width: 1400px;
             display: flex;
             margin: auto;
             width: 86.5vw;
@@ -132,20 +156,29 @@
         }
 
         footer > div > p {
-            margin-top: 10px;
+            position: relative;
+            margin-top: 30px;
             font-size: 11px;
+            
+        }
+
+        footer > div > p#footer_last_p {
+            width: 300px;
+            margin-top: 5px;
         }
 
         footer > hr {
             height: 80px;
-            width: 6px;
+            min-width: 3px;
+            max-width: 3px;
             border: none;
             background-color: rgba(255, 255, 255, 0.150);
         }
 
         footer > div > h2 {
+            position: absolute;
             font-size: 18px;
-            color: rgba(255, 255, 255, 0.600);
+            color: rgba(255, 255, 255, 0.900);
         }
         
 
@@ -160,9 +193,9 @@
             <a href="#" class="btn" id="singup">Sing Up</a>
         </nav>
     </header>
-    <main>
-        <article>
 
+    <main>
+        <article class="content_flex">
             <section id="left">
                 <h4>Welcome to our</h4>
                 <h1>Creative <br> Studio</h1>
@@ -176,10 +209,6 @@
                 <h4>Meet our Team</h4>
                 <iframe src="" frameborder="1"></iframe>
             </section>
-
-            <aside>
-            </aside>
-
         </article>
 
     </main>
@@ -207,7 +236,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium.</p>
         </div>
         <div>
-            <p>
+            <p id="footer_last_p">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, rerum. Blanditiis accusamus minima nostrum assumenda libero quidem aperiam perferendis tempora autem.
             </p>
         </div>
