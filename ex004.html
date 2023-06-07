@@ -12,11 +12,18 @@
             padding: 0px;
         }
 
+        @font-face {
+            font-family: Euclid;
+            src: url(Euclid-Circular-A-Regular.otf);
+        }
+
         body {
+            height: 100vh;
+            width: 100vw;
             font-weight: bold;
             background-color: #071129;
             color: rgba(255, 255, 255, 0.400);
-            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: Euclid;
         }
 
         .gradiente_back {
@@ -39,6 +46,11 @@
             background-repeat: no-repeat;
             background-size: cover;
             opacity: 80%;
+        }
+
+        main {
+            
+            
         }
 
         a:-webkit-any-link {
@@ -68,8 +80,9 @@
         }
 
         section#left > h4 {
-            font-size: larger;
+            font-size: large;
             color: rgba(255, 255, 255, 0.600);
+            margin-bottom: 10px;
         }
 
         section#left > h1 {
@@ -97,21 +110,42 @@
             margin-bottom: 20px;
         }
 
+        hr#top_footer {
+            width: 81vw;
+            margin: 150px auto 20px;
+            height: 3px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.150);
+        }
+
         footer {
             display: flex;
-            position: relative;
-            margin: 60px auto;
-            width: 80%;
-            justify-content: space-between;
+            margin: auto;
+            width: 86.5vw;
+            justify-content: center;
         }
 
         footer > div {
             display: block;
-            width: 300px;
+            width: 400px;
+            margin: 0 60px;
         }
 
         footer > div > p {
+            margin-top: 10px;
             font-size: 11px;
+        }
+
+        footer > hr {
+            height: 80px;
+            width: 6px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.150);
+        }
+
+        footer > div > h2 {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.600);
         }
         
 
@@ -150,7 +184,7 @@
 
     </main>
 
-    <hr>
+    <hr id="top_footer">
 
     <footer>
 
@@ -180,7 +214,7 @@
 
         <hr>
 
-        <div>
+        <div  class="footer_title">
             <h2>Wanna join <br> our Team?</h2>
         </div>
     </footer>
