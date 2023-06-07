@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap" rel="stylesheet">
     <style>
         @charset "UTF-8";
 
@@ -15,6 +18,7 @@
         }
 
         @font-face {
+            
             font-family: Euclid;
             src: url(Euclid-Circular-A-Regular.otf);
         }
@@ -25,7 +29,7 @@
             font-weight: bold;
             background-color: #071129;
             color: rgba(255, 255, 255, 0.400);
-            font-family: Euclid;
+            font-family: 'Montserrat', sans-serif;
         }
 
         h1, h2, h3, h4, p, a, iframe {
@@ -81,6 +85,7 @@
         .btn {
             padding: 11px 40px;
             border: 3px solid rgba(255, 255, 255, 0.500);
+            margin-right: 60px;
         }
 
         #logo {
@@ -203,7 +208,108 @@
             margin-right: 0px;
             width: 200px;
         }
+
+
+        div#side_bar_background {
+            background-color: #07112958;
+            position: absolute;
+            top: -60px;
+            width: 100px;
+            height: 100vh;
+            
+        }
+
+        section#side_bar {
+            
+            display: flex;
+            flex-flow: column;
+            position: absolute;
+            top: 60px;
+            left: 95vw;
+            margin-right: 0px;
+            margin-left: 30px;
+        }
+
+        section#side_bar hr {
+            display: block;
+            width: 40px;
+            height: 3px;
+            border: none;
+            margin: 13px auto;
+            box-shadow: 0px 0px 5px rgba(3, 98, 251, 0.287);
+            background-color: rgba(255, 255, 255, 0.400);
+        }
+
         
+
+        section#side_bar img {
+            display: block;
+            width: 40px;
+            margin: 20px auto;
+            border-style: solid;
+            border-color: rgba(255, 255, 255, 0.400);
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px rgba(3, 98, 251, 0.287);
+            box-sizing: border-box;
+        }
+        section#side_bar img#share {
+            width: 30px;
+            padding: 4px;
+        }
+        section#side_bar img#question {
+            width: 30px;
+            padding: 4px;
+        }
+
+        section#side_bar h2 {
+            margin: 30px auto;
+            writing-mode: vertical-lr;
+            
+        }
+
+        #menu_hr {
+            margin-top: 60px;
+            margin-bottom: 80px;
+        }
+
+        #menu_hr hr:last-child {
+            width: 30px;
+            margin-left: 30px;
+        }
+
+        #redes_sociais {
+            margin-bottom: 150px;
+        }
+        
+        #bar_title {
+            margin-top: 200px;
+            margin-bottom: 150px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            border-style: solid;
+            border-color: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            display: block;
+            margin: 0px 60px 10px;
+        }
+
+        span > img {
+            width: 35px;
+            margin: 20px 60px 10px 50px;
+            opacity: 30%;
+        }
+
+        #active {
+            background-color: rgba(255, 255, 255, 0.900);
+        }
+
+        #dot_arrows {
+            position: absolute;
+            margin-top: 10%;
+        }
 
     </style>
 </head>
@@ -215,6 +321,42 @@
             <a href="#" id="logo">coventic</a>
             <a href="#" class="btn" id="signup">Sign Up</a>
         </nav>
+
+        <section id="dot_arrows">
+            <span class="dot" id="active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span><img src="arrow.png" alt=""></span>
+        </section>
+        
+        <section id="side_bar">
+            <div id="side_bar_background">
+                <div id="menu_hr">
+                    <hr>
+                    <hr>
+                    <hr>
+                </div>
+                <div id="redes_sociais">
+                    <a href="#" target="tela" rel="noopener"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#" target="tela" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
+                    <a href="#" target="tela" rel="noopener"><img src="twitter.png" alt="Twitter"></a>
+                </div>
+                <div id="divisor">
+                    <hr>
+                </div>
+                <div id="bar_title">
+                    <h2>Explore</h2>
+                </div>
+                <div id="help_share">
+                    <a href="#" target="tela" rel="noopener"><img id="share" src="share.png" alt="Share"></a>
+                    <a href="#" target="tela" rel="noopener"><img id="question" src="question.png" alt="Question"></a>
+                </div>
+            </div>
+        </section>
+        
+        
     </header>
 
     <main>
@@ -232,22 +374,10 @@
                 <h4>Meet our Team</h4>
                 <img src="equipe.png" alt="equipe">
             </section>
+
             <hr id="top_footer">
         </article>
-        <section>
-            <div  id="side_bar">
-                <hr>
-                <hr>
-                <hr>
-                <a href="#" target="tela" rel="noopener"><img src="facebook.png" alt="Facebook"></a>
-                <a href="#" target="tela" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
-                <a href="#" target="tela" rel="noopener"><img src="twitter.png" alt="Twitter"></a>
-                <hr>
-                <h2>Explore</h2>
-                <a href="#" target="tela" rel="noopener"><img src="share.png" alt="Instagram"></a>
-                <a href="#" target="tela" rel="noopener"><img src="question.png" alt="Twitter"></a>
-            </div>
-        </section>
+
     </main>
 
     
