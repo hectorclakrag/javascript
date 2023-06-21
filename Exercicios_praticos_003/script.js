@@ -1,9 +1,3 @@
-
-
-
-
-
-
 function verificar() {
     var ini = document.getElementById('ini'); // Contador
     var fim = document.getElementById('fim'); // Condicao
